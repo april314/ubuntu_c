@@ -1,0 +1,2 @@
+/* PASSWORD.H */
+char * password();

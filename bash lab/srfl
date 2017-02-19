@@ -1,0 +1,10 @@
+#!/bin/bash
+#this small utility searches for a file by given name as a parameter (inc. metacharacters),
+#search begins in the current directory
+#prints formatted file contents and adds a signature of a kind to stderr
+
+awk -f script.awk `ls -FR | grep -y "$*"`
+>&2 echo Current directory: `pwd`
+>&2 echo Username: `whoami`
+>&2 echo Date: `date`
+>&2 echo Time elapsed: `times`

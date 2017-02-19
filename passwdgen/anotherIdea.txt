@@ -1,0 +1,14 @@
+2 files
+- server-writer:
+opens a pipe
+generates a password
+waits 3 secs
+if no client has taken a password -- deletes it and makes another
+iterates
+
+- client-reader:
+opens a pipe
+reads a pass and deletes it from pipe
+prints it
+sleeps
+than iterates
